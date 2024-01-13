@@ -7,7 +7,7 @@
 - Wiki10-31K
 - AmazonCat-13K
   Bibtex is provided on the [The Extreme Classification Repository](http://manikvarma.org/downloads/XC/XMLRepository.html#ba-pair), and others are provided on the X-transformer GitHub.
-  ##train and EXperiment
+
 
 ## Train and predict
 The following script is for training and evaluation on the Wiki10-31K data.
