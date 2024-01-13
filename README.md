@@ -2,7 +2,7 @@
 
 ## dataset
 
-- Bibtext
+- Bibtex
 - Eurlex-4K
 - Wiki10-31K
 - AmazonCat-13K
