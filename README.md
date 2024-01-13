@@ -9,8 +9,8 @@
   Bibtex is provided on the [The Extreme Classification Repository](http://manikvarma.org/downloads/XC/XMLRepository.html#ba-pair), and others provided on the X-transformer GitHub.
   ##train and EXperiment
 
-##Train and predict
-Here is an example run on Wiki10-31K using TF-IDF feature
+## Train and predict
+This is an example run on Wiki10-31K using TF-IDF feature
 'python3 main.py \
 --data "Wiki10-31K"\
 --lambda 1.3\
