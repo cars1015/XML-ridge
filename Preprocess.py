@@ -64,7 +64,7 @@ class sparse_array:
 
 
 data=args.data
-#data_dir='/home/hayashi/categorize/data/'+data
+#data_dir='./data_dir/'+data
 data_dir='./XL-ridge/data'+data
 if args.data=='Bibtex':
     train_processor=DateProcessor(dir+'/train.txt')
