@@ -11,6 +11,7 @@
 
 ## Train and predict
 This is an example run on Wiki10-31K using TF-IDF feature
+<br>
 'python3 main.py \
 --data "Wiki10-31K"\
 --lambda 1.3\
