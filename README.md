@@ -1,4 +1,4 @@
-# XL-ridge(A Simple but Effective Closed-form Solution for Extreme Multi-label Learning)
+# XML-ridge(A Simple but Effective Closed-form Solution for Extreme Multi-label Learning)
 
 ## dataset
 
