@@ -4,7 +4,7 @@ import re
 import argparse
 
 #Comandline Aruguent
-parser=argparse.ArgumentParser(description='Preprocess for XL-ridge')
+parser=argparse.ArgumentParser(description='Preprocess for XML-ridge')
 parser.add_argument('-data',type=str,default=None)
 parser.add_argument('-feature',type=str,default='BoW',help='select BoW or TF-IDF')
 
@@ -58,14 +58,12 @@ class DataProcess:
                 num=re.sub(r':','',num)
                 TF_IDF.append(num)
             features = ','.join()
-class sparse_array:
-
 
 
 
 data=args.data
 #data_dir='/home/hayashi/categorize/data/'+data
-data_dir='./XL-ridge/data'+data
+data_dir='./data_dir/'+data
 if args.data=='Bibtex':
     train_processor=DateProcessor(dir+'/train.txt')
     train_processor.fit()
