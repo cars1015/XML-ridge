@@ -1,8 +1,5 @@
-import numpy as np
-import pandas as pd
-import re
-import argparse
 
+<<<<<<< HEAD
 #Comandline Aruguent
 parser=argparse.ArgumentParser(description='Preprocess for XML-ridge')
 parser.add_argument('-data',type=str,default=None)
@@ -69,3 +66,5 @@ if args.data=='Bibtex':
     train_processor.fit()
 elif args.data=='Delicous200K':
     train_processor=DateProcessor(dir+'/train.txt')
+=======
+>>>>>>> 8864b7f886086cbfebd840cca7ca1ef3e8cbb205
