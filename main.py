@@ -57,13 +57,18 @@ def main():
         inv_propen = eval.compute_inv_propensity(Y_train, args.A, args.B)
         Y_train = Y_train.multiply(inv_propen)
     
-    X_train = load_data(dir, 'X.trn.npz')
-    X_test = load_data(dir, 'X.tst.npz')
+    if args.data == "amazoncat13k" or args.data == "delicious200K":
+        X_train=np.load(dir+'X.trn.npy')
+        X_test=np.load(dir+'X.tst.npy')
+    else:
+        X_train = load_data(dir, 'X.trn.npz')
+        X_test = load_data(dir, 'X.tst.npz')
     if args.c_flg==True:
-        X_tr=np.load(dir+'X.trn.finetune.xlnet.npy')
-        X_te=np.load(dir+'X.tst.finetune.xlnet.npy')
-        X_train.toarray()
-        X_test.toarray()
+        X_tr=np.load(dir+'X.bert.trn.npy')
+        X_te=np.load(dir+'X.bert.tst.npy')
+        if scipy.sparse.isspmatrix_csr(X):
+            X_train.toarray()
+            X_test.toarray()
         X_train=csr_matrix(np.vstack(X_train,X_tr))
         X_test=csr_matrix(np.vstack(X_test,X_te))
 
@@ -71,10 +76,31 @@ def main():
 
     model = AE()
     model.fit(X_train, Y_train, lambda_=args.lambda_, flag=args.flag)
-    y_pred = X_test.dot(model.W)
-    acc = eval.Metrics(y_true, inv_psp=inv_propen,
-                                remove_invalid=False)
-    acc = acc.eval(y_pred, 5)
-    display_metrics(acc)
+    if args.data == "amazoncat13k" or args.data == "delicious200K":
+        N_test=X_train.shape[0]
+        batch_size=30000
+        W=model.W
+        acc_sum = None
+        for st_idx in range(0, N_test, batch_size):
+            end_idx = min(st_idx + batch_size, N_test)
+            print(end_idx)
+            y_pred = X[st_idx:end_idx] @ W
+            y_true_b = y_true[st_idx:end_idx, :]
+            acc = eval.Metrics(y_true_b, inv_psp=inv_propen, remove_invalid=False)
+            acc = acc.eval(y_pred, 5)
+            acc_weighted = [x * (end_idx - st_idx) for x in acc]
+            if acc_sum is None:
+                acc_sum = acc_weighted
+            else:
+                acc_sum = [sum(x) for x in zip(acc_sum, acc_weighted)]
+        # normalize
+        acc_normalized = [x / N_test for x in acc_sum]
+        display_metrics(acc_normalized)    
+    else:        
+        y_pred = X_test.dot(model.W)
+        acc = eval.Metrics(y_true, inv_psp=inv_propen,
+                                    remove_invalid=False)
+        acc = acc.eval(y_pred, 5)
+        display_metrics(acc)
 if __name__ == '__main__':
     main()
