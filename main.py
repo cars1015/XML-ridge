@@ -4,6 +4,7 @@ from tabulate import tabulate
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 import eval
+import argparse
 def display_metrics(metrics, k=5):
     final_metrics=metrics
     # Dataset metrics.
@@ -57,15 +58,25 @@ def main():
         inv_propen = eval.compute_inv_propensity(Y_train, args.A, args.B)
         Y_train = Y_train.multiply(inv_propen)
     
-    if args.data == "amazoncat13k" or args.data == "delicious200K":
+    if args.data == "delicious200k":
         X_train=np.load(dir+'X.trn.npy')
         X_test=np.load(dir+'X.tst.npy')
     else:
         X_train = load_data(dir, 'X.trn.npz')
         X_test = load_data(dir, 'X.tst.npz')
     if args.c_flg==True:
-        X_tr=np.load(dir+'X.bert.trn.npy')
-        X_te=np.load(dir+'X.bert.tst.npy')
+        if args.data == "wiki10-31k":
+            X_tr=np.load(dir+'X.bert.trn.npy')
+            X_te=np.load(dir+'X.bert.tst.npy')
+        else:
+            X_1=np.load(dir+'X.bert.trn.npy')
+            X_2=np.load(dir+'X.roberta.trn.npy')
+            X_3=np.load(dir+'X.xlnet.trn.npy')
+            X_tr=
+            X_1=np.load(dir+'X.bert.tst.npy')
+            X_2=np.load(dir+'X.roberta.tst.npy')
+            X_3=np.load(dir+'X.xlnet.tst.npy')
+
         if scipy.sparse.isspmatrix_csr(X):
             X_train.toarray()
             X_test.toarray()

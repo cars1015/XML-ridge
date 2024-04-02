@@ -35,14 +35,16 @@ if you use XLNet embedding...
 ## Hyper parameter
 
 Wiki10
-| DATASET | λ | λ w-flg|
+| DATASET | λ | λ (w-flg)|
 |----------|----------|----------|
-|Bibtex| | |
-|Eurlex-4K| | |
-|Wiki10-31K| | |
-|AmazonCat-13K| |
-|Delicious200K| | |
+|Bibtex|92|93|
+|Eurlex-4K|0.5|6|
+|Wiki10-31K|4|8|
+|AmazonCat-13K|0.1|0.1|
+|Delicious200K|10|10|
 
 ## Reference
+
+The evaluation code was quoted from a (https://github.com/FutureComputing4AI/Learning-with-Holographic-Reduced-Representations?tab=MIT-1-ov-file#readme)
 
 This repository is still being edited.
