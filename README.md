@@ -15,7 +15,7 @@ and others are provided on the [X-transformer GitHub](https://github.com/October
 In our paper's experiments, we utilize embeddings obtained using the XR-transformer method, augmented with TF-IDF. For size reduction, we employ random projection for AmazonCat13K and SVD for delicious200K.
 
 The embeddings can be accessed from the following sources:
-URL
+https://drive.google.com/drive/folders/1gLjFM7JZfuj4yDOoYsDZ4bDvT--YXEGa?usp=sharing
 
 ## Train and predict
 
