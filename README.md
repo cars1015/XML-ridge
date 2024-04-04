@@ -22,14 +22,14 @@ https://drive.google.com/drive/folders/1gLjFM7JZfuj4yDOoYsDZ4bDvT--YXEGa?usp=sha
 The following script is for training and evaluation on the Wiki10-31K data.
 <br>
 `python3 main.py 
---data "Wiki10-31K"
---lambda 1.3
+--data "wiki10-31k"
+--lambda 4
 --A 0.55
 --B 1.5`
 
 if you use propensity score, add this script
 `--w_flg`
-if you use XLNet embedding...
+if you use dence embedding...
 `--c_flg`
 
 ## Hyper parameter
@@ -41,7 +41,7 @@ Wiki10
 |Eurlex-4K|0.5|6|
 |Wiki10-31K|4|8|
 |AmazonCat-13K|0.1|0.1|
-|Delicious200K|10|10|
+|Delicious200K|0.1|0.1|
 
 ## Reference
 
