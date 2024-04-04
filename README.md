@@ -21,11 +21,11 @@ https://drive.google.com/drive/folders/1gLjFM7JZfuj4yDOoYsDZ4bDvT--YXEGa?usp=sha
 
 The following script is for training and evaluation on the Wiki10-31K data.
 <br>
-`python3 main.py \
---data "Wiki10-31K"\
---lambda 1.3\
---A 0.55\
---B 1.5\`
+`python3 main.py 
+--data "Wiki10-31K"
+--lambda 1.3
+--A 0.55
+--B 1.5`
 
 if you use propensity score, add this script
 `--w_flg`
