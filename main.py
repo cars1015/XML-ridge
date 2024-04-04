@@ -44,8 +44,10 @@ def main():
     parser = argparse.ArgumentParser(description='Run AE model with custom parameters.')
     parser.add_argument('--data', type=str, required=True, help='Dataset name')
     parser.add_argument('--lambda_', type=float, default=0.1, help='Lambda value')
+    """
     parser.add_argument('--A', type=float, default=0.55, help='A value for inv propensity')
     parser.add_argument('--B', type=float, default=1.5, help='B value for inv propensity')
+    """
     parser.add_argument('--w_flg', action='store_true', help='Weight flag')
     parser.add_argument('--c_flg',action='store_true',help='Concat flg')
     parser.add_argument('--flag', action='store_true', help='Flag for fit function')
@@ -55,7 +57,7 @@ def main():
 
     Y_train = load_data(dir, 'Y.trn.npz')
     if args.w_flg:
-        inv_propen = eval.compute_inv_propensity(Y_train, args.A, args.B)
+        inv_propen = eval.compute_inv_propensity(Y_train, 0.55, 1.5)
         Y_train = Y_train.multiply(inv_propen)
     
     if args.data == "delicious200k":
@@ -72,11 +74,11 @@ def main():
             X_1=np.load(dir+'X.bert.trn.npy')
             X_2=np.load(dir+'X.roberta.trn.npy')
             X_3=np.load(dir+'X.xlnet.trn.npy')
-            X_tr=
+            X_tr=np.hstack((X_1, X_2, X_3))
             X_1=np.load(dir+'X.bert.tst.npy')
             X_2=np.load(dir+'X.roberta.tst.npy')
             X_3=np.load(dir+'X.xlnet.tst.npy')
-
+            X_te=np.hstack((X_1, X_2, X_3))
         if scipy.sparse.isspmatrix_csr(X):
             X_train.toarray()
             X_test.toarray()

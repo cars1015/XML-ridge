@@ -15,21 +15,19 @@ and others are provided on the [X-transformer GitHub](https://github.com/October
 In our paper's experiments, we utilize embeddings obtained using the XR-transformer method, augmented with TF-IDF. For size reduction, we employ random projection for AmazonCat13K and SVD for delicious200K.
 
 The embeddings can be accessed from the following sources:
-URL
+https://drive.google.com/drive/folders/1gLjFM7JZfuj4yDOoYsDZ4bDvT--YXEGa?usp=sharing
 
 ## Train and predict
 
 The following script is for training and evaluation on the Wiki10-31K data.
 <br>
-`python3 main.py \
---data "Wiki10-31K"\
---lambda 1.3\
---A 0.55\
---B 1.5\`
+`python3 main.py 
+--data "wiki10-31k"
+--lambda 4`
 
 if you use propensity score, add this script
 `--w_flg`
-if you use XLNet embedding...
+if you use dence embedding...
 `--c_flg`
 
 ## Hyper parameter
@@ -41,7 +39,7 @@ Wiki10
 |Eurlex-4K|0.5|6|
 |Wiki10-31K|4|8|
 |AmazonCat-13K|0.1|0.1|
-|Delicious200K|10|10|
+|Delicious200K|0.1|0.1|
 
 ## Reference
 
