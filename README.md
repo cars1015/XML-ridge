@@ -23,7 +23,13 @@ The following script is for training and evaluation on the Wiki10-31K data.
 <br>
 `python3 main.py 
 --data "wiki10-31k"
+<<<<<<< HEAD
 --lambda 4`
+=======
+--lambda 4
+--A 0.55
+--B 1.5`
+>>>>>>> f3e0997081ad15012c407067e6ce8c3a3bbb3039
 
 if you use propensity score, add this script
 `--w_flg`
