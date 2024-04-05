@@ -17,19 +17,15 @@ In our paper's experiments, we utilize embeddings obtained using the XR-transfor
 The embeddings can be accessed from the following sources:
 https://drive.google.com/drive/folders/1gLjFM7JZfuj4yDOoYsDZ4bDvT--YXEGa?usp=sharing
 
+Regarding AmazonCat13k, since we can't save it in my storage space, if you want to replicate it, please download the data provided by AttentionXML and conduct random projection.
+
 ## Train and predict
 
 The following script is for training and evaluation on the Wiki10-31K data.
 <br>
 `python3 main.py 
 --data "wiki10-31k"
-<<<<<<< HEAD
 --lambda 4`
-=======
---lambda 4
---A 0.55
---B 1.5`
->>>>>>> f3e0997081ad15012c407067e6ce8c3a3bbb3039
 
 if you use propensity score, add this script
 `--w_flg`
