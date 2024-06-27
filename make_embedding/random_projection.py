@@ -2,7 +2,7 @@ from sklearn.random_projection import SparseRandomProjection
 from scipy.sparse import csr_matrix
 import numpy as np
 from scipy.sparse import csr_matrix
-
+from scipy.sparse import save_npz
 def projection(save_dir):
     tr_path=save_dir+'/X.trn.npz'
     te_path=save_dir+'/X.tst.npz'
@@ -14,8 +14,8 @@ def projection(save_dir):
     transformer=SparseRandomProjection()
     matrix_tr=transformer.fit_transform(tfidf_tr)
     matrix_te = transformer.transform(tfidf_te)
-    np.save(save_dir+'/X.trn_projection.npy',matrix_tr)
-    np.save(save_dir+'/X.tst_projection.npy',matrix_te)
+    save_npz(save_dir+'/X.trn_projection.npz',matrix_tr)
+    save_npz(save_dir+'/X.tst_projection.npz',matrix_te)
     
 
 data='Wiki10-31K'
