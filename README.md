@@ -48,3 +48,4 @@ Wiki10
 The evaluation code was quoted from a (https://github.com/FutureComputing4AI/Learning-with-Holographic-Reduced-Representations?tab=MIT-1-ov-file#readme)
 
 This repository is still being edited.
+論文公開までに、yamlファイル追加します。
