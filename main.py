@@ -16,7 +16,7 @@ def display_metrics(metrics, k=5):
     print(tabulate(table, headers=[i+1 for i in range(0, k)],
                    floatfmt=".3f"))
 
-class AE:
+class Regression:
     def fit(self,X,Y,lambda_,flag=True):
         if flag==True:
             G=X.T.dot(X).toarray()
@@ -87,7 +87,7 @@ def main():
 
     y_true = load_data(dir, 'Y.tst.npz')
 
-    model = AE()
+    model = Regression()
     model.fit(X_train, Y_train, lambda_=args.lambda_, flag=args.flag)
     if args.data == "amazoncat13k" or args.data == "delicious200K":
         N_test=X_train.shape[0]
