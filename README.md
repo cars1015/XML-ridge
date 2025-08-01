@@ -42,6 +42,8 @@ if you use propensity score, add this script
 if you use dence embedding...
 `--c_flg`
 
+The evaluation code was quoted from [this repositry](https://github.com/kunaldahiya/pyxclib?tab=readme-ov-file)
+
 ## Hyper parameter
 
 Wiki10
@@ -55,5 +57,4 @@ Wiki10
 
 ## Reference
 
-The evaluation code was quoted from [this repositry](https://github.com/kunaldahiya/pyxclib?tab=readme-ov-file)
 
