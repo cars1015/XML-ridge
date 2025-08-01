@@ -56,5 +56,17 @@ Wiki10
 |Delicious200K|0.1|0.1|
 
 ## Reference
-
-
+[A Simple but Effective Closed-form Solution for
+Extreme Multi-label Learning @ ECIR2025](https://arxiv.org/pdf/2501.10179)
+Bibtex:
+```bash
+@misc{onishi2025simpleeffectiveclosedformsolution,
+      title={A Simple but Effective Closed-form Solution for Extreme Multi-label Learning}, 
+      author={Kazuma Onishi and Katsuhiko Hayashi},
+      year={2025},
+      eprint={2501.10179},
+      archivePrefix={arXiv},
+      primaryClass={cs.IR},
+      url={https://arxiv.org/abs/2501.10179}, 
+}
+```
