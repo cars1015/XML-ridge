@@ -46,7 +46,6 @@ The evaluation code was quoted from [this repositry](https://github.com/kunaldah
 
 ## Hyper parameter
 
-Wiki10
 | DATASET | λ | λ (w-flg)|
 |----------|----------|----------|
 |Bibtex|92|93|
@@ -58,6 +57,8 @@ Wiki10
 ## Reference
 [A Simple but Effective Closed-form Solution for
 Extreme Multi-label Learning @ ECIR2025](https://arxiv.org/pdf/2501.10179)
+
+
 Bibtex:
 ```bash
 @misc{onishi2025simpleeffectiveclosedformsolution,
