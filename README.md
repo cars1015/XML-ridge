@@ -18,7 +18,7 @@ conda env create -f environment.yml
 ```
 ### Activate
 ```bash
-conda activate sigprop-rec
+conda activate XML-ridge
 ```
 
 ## Embedding
