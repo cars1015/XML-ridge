@@ -55,5 +55,5 @@ Wiki10
 
 ## Reference
 
-The evaluation code was quoted from a (https://github.com/FutureComputing4AI/Learning-with-Holographic-Reduced-Representations?tab=MIT-1-ov-file#readme)
+The evaluation code was quoted from [this repositry](https://github.com/kunaldahiya/pyxclib?tab=readme-ov-file)
 
